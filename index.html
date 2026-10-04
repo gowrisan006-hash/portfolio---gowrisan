@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#070b0c">
+<title>Gowrisan B | Full Stack Developer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="bg"></canvas>
+<div class="glow" id="glow"></div>
+
+<nav class="nav">
+  <a href="#home" class="logo">Gowri<span>san</span></a>
+  <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><i></i><i></i><i></i></button>
+  <div class="links" id="links">
+    <a href="#home">Home</a><a href="#profile">Profile</a><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#hire" class="btn small">Hire Me</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header id="home" class="hero">
+  <div class="hero-text">
+    <p class="hello">Hi, I'm</p>
+    <h1 class="name"><span>Gowrisan</span> <span class="g">B</span></h1>
+    <div class="role-pop" id="rolePop">
+      <span class="dot"></span><span id="roleText">FULL STACK DEVELOPER</span>
+    </div>
+    <p class="typed-line">I build <span id="typed"></span><span class="caret">|</span></p>
+    <p class="lead">Creating high-performance web applications with striking aesthetics, clean architectures, and modern user experiences.</p>
+    <div class="cta">
+      <a href="#hire" class="btn">Hire Me</a>
+      <a href="#skills" class="btn ghost">View Skills</a>
+    </div>
+    <div class="stats">
+      <div><b data-count="6">0</b>+<small>Months Experience</small></div>
+      <div><b data-count="5">0</b>+<small>Projects Built</small></div>
+      <div><b data-count="8">0</b>+<small>Technologies</small></div>
+    </div>
+  </div>
+  <div class="hero-photo">
+    <div class="ring"></div><div class="ring r2"></div>
+    <img src="profile.jpg" alt="Gowrisan B" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'">
+    <div class="ph">GB</div>
+    <span class="chip c1">&lt;/&gt; React</span>
+    <span class="chip c2">Node.js</span>
+    <span class="chip c3">MongoDB</span>
+  </div>
+  <a href="#profile" class="scroll"><i></i></a>
+</header>
+
+<!-- PROFILE -->
+<section id="profile" class="sec">
+  <h2 class="title reveal">PRO<span>FILE</span></h2>
+  <p class="sub reveal">Get to know more about me and my professional background.</p>
+  <div class="grid2">
+    <div class="card profile-card reveal">
+      <div class="avatar"><img src="D:\coding\portfolio - gowrisan\WhatsApp Image 2026-10-04 at 4.50.48 PM.jpeg" alt="" onerror="this.remove()"></div>
+      <h3>Gowrisan <span>B</span></h3>
+      <div class="tag">FULL STACK DEVELOPER</div>
+      <p>Creating high-performance web applications with striking aesthetics, clean architectures, and modern user experiences.</p>
+      <div class="socials"><a href="#">in</a><a href="#">GH</a><a href="#hire">@</a></div>
+    </div>
+    <div class="stack">
+      <div class="card reveal">
+        <h4>PERSONAL INFO</h4>
+        <ul class="info">
+          <li><span>LOCATION</span><b>Coimbaatore, India</b></li>
+          <li><span>EMAIL</span><b class="g">gowrisan006@gmail.com</b></li>
+          <li><span>EXPERIENCE</span><b>6+ Months</b></li>
+          <li><span>EDUCATION</span><b><B class="Tech">B.Tech</B>. Information Technology</b></li>
+        </ul>
+      </div>
+      <div class="card reveal">
+        <h4>&lt;/&gt; TECH FOCUS</h4>
+        <div class="pills">
+          <span>React / Next.js</span><span>Node.js / Express</span><span>JavaScript (ES6+)</span>
+          <span>CSS Grid / Flexbox</span><span>HTML5</span><span>SQL &amp; MongoDB</span>
+          <span>RESTful APIs</span><span>Git &amp; GitHub</span><span>Tailwind CSS</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="sec center">
+  <p class="eyebrow reveal">ABOUT ME</p>
+  <h2 class="title reveal">More About <span>Me</span></h2>
+  <p class="sub reveal">I'm a passionate Full Stack Developer who loves building fast, scalable and user-friendly web applications.</p>
+  <div class="grid3">
+    <div class="card about reveal"><div class="ico">👤</div><h3>Who I Am</h3>
+      <p>I'm Gowrisan B, a Full Stack Developer based in India. I build complete web solutions that are fast, scalable and user-friendly.</p>
+      <ul class="ticks"><li>Full Stack Developer</li><li>Clean &amp; Efficient Code</li><li>Problem Solver</li></ul></div>
+    <div class="card about reveal"><div class="ico">💎</div><h3>My Values</h3>
+      <p>I believe development is more than just code. It's about creating solutions that are useful, accessible and meaningful.</p>
+      <ul class="ticks"><li>User First Approach</li><li>Quality &amp; Consistency</li><li>Continuous Learning</li></ul></div>
+    <div class="card about reveal"><div class="ico">🚩</div><h3>My Journey</h3>
+      <p>I started my journey with a curiosity for how things work on the web. Today, I turn ideas into real-world digital products.</p>
+      <ul class="ticks"><li>B.Tech in Information Technology</li><li>Web Developer</li><li>Building &amp; Growing Everyday</li></ul></div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="sec center">
+  <p class="eyebrow reveal">MY TECH STACK</p>
+  <h2 class="title reveal">SKILLS &amp; <span>EXPERTISE</span></h2>
+  <p class="sub reveal">A comprehensive toolkit of technologies and tools I use to build modern, scalable, and user-centric digital solutions.</p>
+  <div class="grid2 skills">
+    <div class="card sk green reveal"><h3>FRONTEND</h3><small>Building responsive &amp; interactive interfaces</small>
+      <div class="bar" data-v="95"><p>HTML5 / CSS3 / ES6+<b>95%</b></p><i></i></div>
+      <div class="bar" data-v="90"><p>React.js / Next.js<b>90%</b></p><i></i></div>
+      <div class="bar" data-v="85"><p>Vanilla JS &amp; DOM<b>85%</b></p><i></i></div></div>
+    <div class="card sk purple reveal"><h3>BACKEND</h3><small>Building robust &amp; efficient server-side solutions</small>
+      <div class="bar" data-v="90"><p>Node.js / Express<b>90%</b></p><i></i></div>
+      <div class="bar" data-v="88"><p>RESTful APIs / GraphQL<b>88%</b></p><i></i></div>
+      <div class="bar" data-v="80"><p>Async Flow &amp; Performance<b>80%</b></p><i></i></div></div>
+    <div class="card sk blue reveal"><h3>DATABASES &amp; DEVOPS</h3><small>Managing data, deployment &amp; infrastructure</small>
+      <div class="bar" data-v="85"><p>MongoDB / PostgreSQL<b>85%</b></p><i></i></div>
+      <div class="bar" data-v="90"><p>Git / GitHub Actions<b>90%</b></p><i></i></div>
+      <div class="bar" data-v="80"><p>Linux / Local Hosting<b>80%</b></p><i></i></div></div>
+    <div class="card sk pink reveal"><h3>UI &amp; ARCHITECTURE</h3><small>Designing clean, scalable &amp; user-friendly systems</small>
+      <div class="bar" data-v="90"><p>Clean UI / Glassmorphism<b>90%</b></p><i></i></div>
+      <div class="bar" data-v="95"><p>Responsive Web Design<b>95%</b></p><i></i></div>
+      <div class="bar" data-v="85"><p>System Design &amp; Patterns<b>85%</b></p><i></i></div></div>
+  </div>
+</section>
+
+
+<!-- TECH MARQUEE -->
+<div class="strip"><div class="strip-track"><span>REACT ✦ NEXT.JS ✦ NODE.JS ✦ EXPRESS ✦ MONGODB ✦ SQL ✦ JAVASCRIPT ✦ TAILWIND ✦ GIT ✦ REST APIs ✦ </span><span>REACT ✦ NEXT.JS ✦ NODE.JS ✦ EXPRESS ✦ MONGODB ✦ SQL ✦ JAVASCRIPT ✦ TAILWIND ✦ GIT ✦ REST APIs ✦ </span></div></div>
+
+<!-- SERVICES -->
+<section id="services" class="sec center">
+  <p class="eyebrow reveal">WHAT I DO</p>
+  <h2 class="title reveal">My <span>Services</span></h2>
+  <p class="sub reveal">End-to-end development, from the first pixel to the last database query.</p>
+  <div class="grid3 svc">
+    <div class="card srv reveal"><div class="ico">🖥️</div><h3>Full Stack Web Apps</h3><p>Complete applications with a React front end, Node.js back end and a database that scales.</p></div>
+    <div class="card srv reveal"><div class="ico">📱</div><h3>Responsive Frontend</h3><p>Pixel-clean, accessible interfaces that look great on phones, tablets and desktops.</p></div>
+    <div class="card srv reveal"><div class="ico">🔌</div><h3>REST API Development</h3><p>Well-structured, secure endpoints built with Node.js and Express.</p></div>
+    <div class="card srv reveal"><div class="ico">🗄️</div><h3>Database Design</h3><p>Clean schemas and efficient queries with MongoDB and SQL.</p></div>
+    <div class="card srv reveal"><div class="ico">🚀</div><h3>Deployment &amp; Git</h3><p>Version control, clean workflows and smooth deployment of your project.</p></div>
+    <div class="card srv reveal"><div class="ico">⚡</div><h3>Performance Tuning</h3><p>Faster load times, optimized code and bug fixing for existing projects.</p></div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="sec center">
+  <p class="eyebrow reveal">PORTFOLIO</p>
+  <h2 class="title reveal">Featured <span>Projects</span></h2>
+  <p class="sub reveal">A selection of things I build and ship.</p>
+  <div class="filters reveal" id="filters">
+    <button class="f on" data-f="all">All</button><button class="f" data-f="frontend">Frontend</button><button class="f" data-f="fullstack">Full Stack</button><button class="f" data-f="api">API</button>
+  </div>
+  <div class="grid3 proj" id="projGrid">
+    <article class="card pj reveal" data-c="frontend"><div class="thumb"><i></i><i></i><i></i><b>&lt;/&gt;</b></div><h3>Portfolio Website</h3><p>A fast, animated personal site with a modern dark UI.</p><div class="tg"><span>HTML</span><span>CSS</span><span>JS</span></div><div class="lk"><a href="#">Live ↗</a><a href="#">GitHub ↗</a></div></article>
+    <article class="card pj reveal" data-c="fullstack"><div class="thumb t2"><i></i><i></i><i></i><b>{ }</b></div><h3>Full Stack Web App</h3><p>React interface with a Node.js API and MongoDB database.</p><div class="tg"><span>React</span><span>Node.js</span><span>MongoDB</span></div><div class="lk"><a href="#">Live ↗</a><a href="#">GitHub ↗</a></div></article>
+    <article class="card pj reveal" data-c="api"><div class="thumb t3"><i></i><i></i><i></i><b>API</b></div><h3>REST API Service</h3><p>Secure, well-documented endpoints built with Express.</p><div class="tg"><span>Express</span><span>REST</span><span>SQL</span></div><div class="lk"><a href="#">Live ↗</a><a href="#">GitHub ↗</a></div></article>
+    <article class="card pj reveal" data-c="frontend"><div class="thumb t4"><i></i><i></i><i></i><b>UI</b></div><h3>Responsive Landing Page</h3><p>Clean, mobile-first landing page with smooth animations.</p><div class="tg"><span>React</span><span>Tailwind</span></div><div class="lk"><a href="#">Live ↗</a><a href="#">GitHub ↗</a></div></article>
+    <article class="card pj reveal" data-c="fullstack"><div class="thumb"><i></i><i></i><i></i><b>✓</b></div><h3>Task Manager App</h3><p>Create, update and track tasks with a simple full stack flow.</p><div class="tg"><span>Next.js</span><span>Node.js</span><span>MongoDB</span></div><div class="lk"><a href="#">Live ↗</a><a href="#">GitHub ↗</a></div></article>
+    <article class="card pj reveal" data-c="api"><div class="thumb t2"><i></i><i></i><i></i><b>⚙</b></div><h3>Auth &amp; Data API</h3><p>Reusable back end for user data, built to plug into any front end.</p><div class="tg"><span>Node.js</span><span>Express</span><span>MongoDB</span></div><div class="lk"><a href="#">Live ↗</a><a href="#">GitHub ↗</a></div></article>
+  </div>
+  <p class="note reveal">Sample projects. Replace titles, text and links with your real work.</p>
+</section>
+
+<!-- JOURNEY -->
+<section id="journey" class="sec">
+  <p class="eyebrow reveal" style="text-align:center">EXPERIENCE &amp; EDUCATION</p>
+  <h2 class="title reveal" style="text-align:center">My <span>Journey</span></h2>
+  <div class="tl" id="tl"><i class="tl-fill" id="tlFill"></i>
+    <div class="tl-item"><small>THE START</small><h3>Curiosity for the web</h3><p>It began with wondering how websites actually work, then building small pages to find out.</p></div>
+    <div class="tl-item"><small>EDUCATION</small><h3>B.Tech in Information Technology</h3><p>Built a strong foundation in programming, data structures, databases and problem solving.</p></div>
+    <div class="tl-item"><small>6+ MONTHS</small><h3>Web Developer</h3><p>Worked with HTML, CSS, JavaScript, React and Node.js, learning through real, hands-on projects.</p></div>
+    <div class="tl-item"><small>TODAY</small><h3>Full Stack Developer</h3><p>Building complete products and growing every day, open to freelance and full-time roles.</p></div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="sec">
+  <p class="eyebrow reveal" style="text-align:center">QUESTIONS</p>
+  <h2 class="title reveal" style="text-align:center">Quick <span>FAQ</span></h2>
+  <div class="faq reveal">
+    <div class="q open"><button>Are you available for work?<span>+</span></button><div class="a"><p>Yes. I'm open to both freelance projects and full-time roles.</p></div></div>
+    <div class="q"><button>What technologies do you use?<span>+</span></button><div class="a"><p>React and Next.js on the front end, Node.js and Express on the back end, with MongoDB and SQL for data, plus Git and GitHub.</p></div></div>
+    <div class="q"><button>Can you work on an existing project?<span>+</span></button><div class="a"><p>Absolutely. I can fix bugs, improve performance and add new features to existing code.</p></div></div>
+    <div class="q"><button>Where are you based?<span>+</span></button><div class="a"><p>Chennai, India, and I'm happy to collaborate remotely.</p></div></div>
+    <div class="q"><button>How do we start a project?<span>+</span></button><div class="a"><p>Send me a message through the form below with a short description of your idea and I'll get back to you.</p></div></div>
+  </div>
+</section>
+
+<!-- HIRE -->
+<section id="hire" class="sec">
+  <div class="grid2 hire">
+    <div class="reveal">
+      <h2 class="title">HIRE <span>ME</span></h2>
+      <h3 class="lets">Let's build something amazing together.</h3>
+      <p class="sub left">Have a project in mind or just want to say hello? I'm always open to discussing new opportunities, collaborations or partnerships.</p>
+      <div class="contact"><span>✉</span><div><small>EMAIL</small><b>gowrisan006@gmail.com</b></div></div>
+      <div class="contact"><span>📍</span><div><small>LOCATION</small><b>Coimbatore, India</b></div></div>
+      <div class="contact"><span>🕒</span><div><small>AVAILABILITY</small><b>Open for Freelance &amp; Full-time</b></div></div>
+    </div>
+    <form class="card reveal" id="form">
+      <label>YOUR NAME<input required placeholder="John Doe"></label>
+      <label>YOUR EMAIL<input type="email" required placeholder="john@example.com"></label>
+      <label>SUBJECT<input placeholder="Project Inquiry"></label>
+      <label>MESSAGE<textarea rows="4" placeholder="Hello! I would like to build a project together..."></textarea></label>
+      <button class="btn full" type="submit">SEND MESSAGE</button>
+      <p class="secure" id="msg">🔒 Your information is 100% secure.</p>
+    </form>
+  </div>
+  <footer>© 2026 Gowrisan B. Built with passion.</footer>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
