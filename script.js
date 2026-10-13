@@ -197,12 +197,43 @@ if (matchMedia('(hover:hover)').matches) {
 }
 
 // Contact form (demo)
-document.getElementById('form').addEventListener('submit', (event) => {
+document.getElementById("form").addEventListener("submit", async (event) => {
   event.preventDefault();
-  document.getElementById('msg').textContent = '✅ Message sent! I will reply soon.';
-  event.target.reset();
-});
 
+  const form = event.target;
+  const msg = document.getElementById("msg");
+
+  const formData = {
+    name: form.name.value,
+    email: form.email.value,
+    subject: form.subject.value,
+    message: form.message.value,
+  };
+
+  msg.textContent = "Sending...";
+
+  try {
+    const response = await fetch("http://localhost:5000/send-email", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
+
+    const data = await response.json();
+
+    if (response.ok) {
+      msg.textContent = "✅ Message sent successfully!";
+      form.reset();
+    } else {
+      msg.textContent = "❌ " + data.message;
+    }
+  } catch (error) {
+    console.error(error);
+    msg.textContent = "❌ Unable to connect to server.";
+  }
+});
 // Mobile menu
 const burger = document.getElementById('burger');
 const links = document.getElementById('links');
