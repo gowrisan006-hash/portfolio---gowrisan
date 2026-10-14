@@ -40,6 +40,7 @@ app.get("/test-email", async (req, res) => {
 
 // Contact form email
 app.post("/send-email", async (req, res) => {
+     console.log("Contact form request received:", req.body); // Log the request body for debugging
   try {
     const { name, email, subject, message } = req.body;
 
