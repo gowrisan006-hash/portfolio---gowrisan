@@ -227,7 +227,7 @@ document.getElementById("form").addEventListener("submit", async (event) => {
       msg.textContent = "✅ Message sent successfully!";
       form.reset();
     } else {
-      msg.textContent = "❌ " + data.message;
+      msg.textContent = "❌ " + data.message + " - " + (data.error || "Unknown error");
     }
   } catch (error) {
     console.error(error);
