@@ -1,6 +1,6 @@
 const express = require("express");
 const cors = require("cors");
-const nodemailer = require("nodemailer");
+const Resend = require("resend");
 require("dotenv").config();
 
 const app = express();
@@ -8,7 +8,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-const transporter = nodemailer.createTransport({
+const resend= new resend(process.env.RESEND_API_KEY)({
   host: "smtp.gmail.com",
   port: 587,
   secure: false,
@@ -47,13 +47,12 @@ app.post("/send-email", async (req, res) => {
   try {
     const { name, email, subject, message } = req.body;
 
-    await transporter.sendMail({
-      from: process.env.EMAIL_USER,
-      to: process.env.EMAIL_USER,
-      replyTo: email,
-      subject: subject || "New Portfolio Contact Message",
-      text: `
-Name: ${name}
+    const { data, error } = await resend.emails.send({
+  from: "Portfolio Contact <onboarding@resend.dev>",
+  to: [process.env.EMAIL_USER],
+  replyTo: email,
+  subject: subject || "New Portfolio Contact Message",
+  text: `Name: ${name}
 Email: ${email}
 
 Message:
@@ -61,14 +60,22 @@ ${message}
       `,
     });
 
-    res.json({ message: "Email sent successfully!" });
-  } catch (error) {
-    console.error("Email Error:", error.message);
+    if (error) {
+  console.error("Resend Error:", error);
+  return res.status(500).json({
+    message: "Email failed!",
+    error: error.message,
+  });
+}
+
+res.json({ message: "Email sent successfully!", id: data?.id });
+} catch (error) {
+    console.error("Resend Error:", error.message);
     res.status(500).json({ message: "Email failed!" , error: error.message });
   }
 });
 
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
