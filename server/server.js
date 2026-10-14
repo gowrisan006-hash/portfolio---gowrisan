@@ -33,8 +33,8 @@ app.get("/test-email", async (req, res) => {
 
     res.send("Email sent successfully!");
   } catch (error) {
-    console.error(error);
-    res.status(500).send("Email failed!");
+    console.error("Email Error:", error.message);
+    res.status(500).json({ message: "Email failed!" , error: error.message });
   }
 });
 
@@ -59,8 +59,8 @@ ${message}
 
     res.json({ message: "Email sent successfully!" });
   } catch (error) {
-    console.error(error);
-    res.status(500).json({ message: "Email failed!" });
+    console.error("Email Error:", error.message);
+    res.status(500).json({ message: "Email failed!" , error: error.message });
   }
 });
 
